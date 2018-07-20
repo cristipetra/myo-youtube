@@ -13,6 +13,7 @@
 		08EC5D8721021D8F006C54FE /* myo_youtube.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 08EC5D8521021D8F006C54FE /* myo_youtube.xcdatamodeld */; };
 		08EC5D8921021D91006C54FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08EC5D8821021D91006C54FE /* Assets.xcassets */; };
 		08EC5D8C21021D91006C54FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08EC5D8A21021D91006C54FE /* LaunchScreen.storyboard */; };
+		59BAC604B8A8F70B97118D44 /* Pods_myo_youtube.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 624C7C87B8CAC4CECC735C3E /* Pods_myo_youtube.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		08EC5D8821021D91006C54FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08EC5D8B21021D91006C54FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08EC5D8D21021D91006C54FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4336EB85FB07894E0F18DA53 /* Pods-myo-youtube.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myo-youtube.release.xcconfig"; path = "Pods/Target Support Files/Pods-myo-youtube/Pods-myo-youtube.release.xcconfig"; sourceTree = "<group>"; };
+		624C7C87B8CAC4CECC735C3E /* Pods_myo_youtube.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myo_youtube.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87E2F2505CEA023AEDCC8D5C /* Pods-myo-youtube.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myo-youtube.debug.xcconfig"; path = "Pods/Target Support Files/Pods-myo-youtube/Pods-myo-youtube.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59BAC604B8A8F70B97118D44 /* Pods_myo_youtube.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				08EC5D7D21021D8F006C54FE /* myo-youtube */,
 				08EC5D7C21021D8F006C54FE /* Products */,
+				ECD92AD1EAA573BA517CAB8E /* Pods */,
+				F29B1888E2F5AFB8450750AC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = "myo-youtube";
 			sourceTree = "<group>";
 		};
+		ECD92AD1EAA573BA517CAB8E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				87E2F2505CEA023AEDCC8D5C /* Pods-myo-youtube.debug.xcconfig */,
+				4336EB85FB07894E0F18DA53 /* Pods-myo-youtube.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F29B1888E2F5AFB8450750AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				624C7C87B8CAC4CECC735C3E /* Pods_myo_youtube.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +98,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 08EC5D9021021D91006C54FE /* Build configuration list for PBXNativeTarget "myo-youtube" */;
 			buildPhases = (
+				72B7A13C3D3CFF18D7F094B1 /* [CP] Check Pods Manifest.lock */,
 				08EC5D7721021D8F006C54FE /* Sources */,
 				08EC5D7821021D8F006C54FE /* Frameworks */,
 				08EC5D7921021D8F006C54FE /* Resources */,
@@ -132,6 +157,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		72B7A13C3D3CFF18D7F094B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-myo-youtube-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		08EC5D7721021D8F006C54FE /* Sources */ = {
@@ -282,14 +328,12 @@
 		};
 		08EC5D9121021D91006C54FE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87E2F2505CEA023AEDCC8D5C /* Pods-myo-youtube.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "myo-youtube/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "artep.myo-youtube";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -299,14 +343,12 @@
 		};
 		08EC5D9221021D91006C54FE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4336EB85FB07894E0F18DA53 /* Pods-myo-youtube.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "myo-youtube/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "artep.myo-youtube";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
