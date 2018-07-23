@@ -48,8 +48,6 @@ class YoutubeDetailsViewController: UIViewController {
         self.containerComments.addSubview(commentsTableViewController.view)
         commentsTableViewController.view.frame = self.containerComments.bounds
         
-        
-        
         commentsTableViewController.didMove(toParentViewController: self)
     }
     

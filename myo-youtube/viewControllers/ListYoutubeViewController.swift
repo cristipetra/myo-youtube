@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EZLoadingActivity
 
 class ListYoutubeViewController: UIViewController {
 
@@ -49,6 +50,8 @@ extension ListYoutubeViewController: UITableViewDataSource, UITableViewDelegate 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc: UINavigationController = AppStoryboard.Main.instance.instantiateViewController(withIdentifier: "navigationController") as! UINavigationController
         (vc.viewControllers.first as? YoutubeDetailsViewController)?.configure(videos[indexPath.row])
+        
+        
         self.present(vc, animated: true, completion: nil)
         
     }
@@ -58,8 +61,9 @@ extension ListYoutubeViewController: UITableViewDataSource, UITableViewDelegate 
 // MARK: - UISearchBarDelegate
 extension ListYoutubeViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
+        EZLoadingActivity.show("Loading...", disableUI: false)
         YoutubeApi().getVideos(searchBar.text!) { (response) in
+            EZLoadingActivity.hide()
             if let items = response?.items {
                 self.videos = items
                 self.tableView.reloadData()

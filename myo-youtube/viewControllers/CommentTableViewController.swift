@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EZLoadingActivity
 
 class CommentTableViewController: UITableViewController {
     
@@ -26,10 +27,13 @@ class CommentTableViewController: UITableViewController {
     
     private func getComments() {
         guard let videoId = videoId else { return }
-        
         YoutubeApi().getComments(videoId) { (commentsList) in
-            self.comments = (commentsList?.items)!
-            self.tableView.reloadData()
+            if let commentsList = commentsList {
+                self.comments = commentsList.items
+                self.tableView.reloadData()
+            } else {
+                EZAlertController.alert("Something")
+            }
         }
     }
 
@@ -47,6 +51,7 @@ class CommentTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: YoutubeCommentViewCell = tableView.dequeueReusableCell(withIdentifier: "commentCell", for: indexPath) as! YoutubeCommentViewCell
         cell.configure(comments[indexPath.row])
+        
         return cell
     }
     

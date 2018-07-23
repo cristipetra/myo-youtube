@@ -10,5 +10,6 @@ target 'myo-youtube' do
   pod 'Alamofire', :git => 'https://github.com/Alamofire/Alamofire.git', :branch => 'alamofire5'
   pod 'SDWebImage'
   pod 'YouTubePlayer', :git => 'https://github.com/cristipetra/Swift-YouTube-Player.git'
+  pod 'EZLoadingActivity'
 
 end

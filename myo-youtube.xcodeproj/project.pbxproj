@@ -71,6 +71,7 @@
 		08C374FE2105D087005E2371 /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				08C374FC2105C48E005E2371 /* YoutubeDetailsViewController.swift */,
 				08C6514421032AB400F11F75 /* ListYoutubeViewController.swift */,
 				08C375012105E071005E2371 /* CommentTableViewController.swift */,
 			);
@@ -81,7 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				08C651412103269C00F11F75 /* cellRender */,
-				08C374FC2105C48E005E2371 /* YoutubeDetailsViewController.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -244,14 +244,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-myo-youtube/Pods-myo-youtube-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/EZLoadingActivity/EZLoadingActivity.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/YouTubePlayer/YouTubePlayer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EZLoadingActivity.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YouTubePlayer.framework",
 			);
@@ -444,10 +444,7 @@
 				DEVELOPMENT_TEAM = RUMEKEPPWV;
 				INFOPLIST_FILE = "myo-youtube/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "artep.myo-youtube";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -464,10 +461,7 @@
 				DEVELOPMENT_TEAM = RUMEKEPPWV;
 				INFOPLIST_FILE = "myo-youtube/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "artep.myo-youtube";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
