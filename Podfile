@@ -6,5 +6,8 @@ target 'myo-youtube' do
   use_frameworks!
 
   # Pods for myo-youtube
+  #pod 'Alamofire'
+  pod 'Alamofire', :git => 'https://github.com/Alamofire/Alamofire.git', :branch => 'alamofire5'
+  pod 'SDWebImage'
 
 end

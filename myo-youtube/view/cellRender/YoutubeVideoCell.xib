@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="rUA-r3-O1d" customClass="YoutubeVideoCell" customModule="myo_youtube" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="376" height="146"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rUA-r3-O1d" id="SP1-nK-7kl">
+                <rect key="frame" x="0.0" y="0.0" width="376" height="145.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cH6-b2-7Va">
+                        <rect key="frame" x="0.0" y="0.0" width="376" height="140"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="B33-4i-dFn">
+                                <rect key="frame" x="0.0" y="0.0" width="180" height="140"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="socialMedia" translatesAutoresizingMaskIntoConstraints="NO" id="uWg-lT-ZCV">
+                                        <rect key="frame" x="8" y="8" width="172" height="124"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="A3D-pl-ppI"/>
+                                    <constraint firstAttribute="trailing" secondItem="uWg-lT-ZCV" secondAttribute="trailing" id="DTw-14-1Dg"/>
+                                    <constraint firstAttribute="bottom" secondItem="uWg-lT-ZCV" secondAttribute="bottom" constant="8" id="bj0-Me-qMN"/>
+                                    <constraint firstItem="uWg-lT-ZCV" firstAttribute="leading" secondItem="B33-4i-dFn" secondAttribute="leading" constant="8" id="egH-1b-bOg"/>
+                                    <constraint firstItem="uWg-lT-ZCV" firstAttribute="top" secondItem="B33-4i-dFn" secondAttribute="top" constant="8" id="uWD-Uc-CqC"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LXX-2l-AHA">
+                                <rect key="frame" x="188" y="0.0" width="188" height="140"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label " lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVV-ju-YAH">
+                                        <rect key="frame" x="8" y="8" width="172" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="DVV-ju-YAH" secondAttribute="trailing" constant="8" id="9N1-1I-Che"/>
+                                    <constraint firstItem="DVV-ju-YAH" firstAttribute="leading" secondItem="LXX-2l-AHA" secondAttribute="leading" constant="8" id="NWC-Le-1fv"/>
+                                    <constraint firstItem="DVV-ju-YAH" firstAttribute="top" secondItem="LXX-2l-AHA" secondAttribute="top" constant="8" id="UCR-G7-BCm"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="140" id="AGD-kU-6lx"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="cH6-b2-7Va" firstAttribute="leading" secondItem="SP1-nK-7kl" secondAttribute="leading" id="MHk-zB-yMz"/>
+                    <constraint firstAttribute="trailing" secondItem="cH6-b2-7Va" secondAttribute="trailing" id="eK6-PD-Yvp"/>
+                    <constraint firstAttribute="bottom" secondItem="cH6-b2-7Va" secondAttribute="bottom" priority="999" id="ryd-qF-KpJ"/>
+                    <constraint firstItem="cH6-b2-7Va" firstAttribute="top" secondItem="SP1-nK-7kl" secondAttribute="top" id="vrm-b9-iyN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="title" destination="DVV-ju-YAH" id="Thf-dd-BHG"/>
+                <outlet property="videoImageView" destination="uWg-lT-ZCV" id="Qtu-EA-XrW"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="105"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="socialMedia" width="375" height="251"/>
+    </resources>
+</document>
