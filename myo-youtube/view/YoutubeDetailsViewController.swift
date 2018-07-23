@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import YouTubePlayer
 
 class YoutubeDetailsViewController: UIViewController {
     
@@ -18,10 +19,12 @@ class YoutubeDetailsViewController: UIViewController {
     
     private var youtubeVideo: YoutubeVideo?
     
+    private var videoPlayer: YouTubePlayerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        createVideoPlayer()
         addCommentsView()
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: "Back", style: .done, target: self, action: #selector(handlerCloseWindow))
@@ -34,6 +37,7 @@ class YoutubeDetailsViewController: UIViewController {
             if let videoId = youtubeVideo.id.videoId {
                 commentsTableViewController.configure(videoId)
             }
+            
         }
     }
     
@@ -44,9 +48,15 @@ class YoutubeDetailsViewController: UIViewController {
         self.containerComments.addSubview(commentsTableViewController.view)
         commentsTableViewController.view.frame = self.containerComments.bounds
         
+        
+        
         commentsTableViewController.didMove(toParentViewController: self)
     }
     
+    private func createVideoPlayer() {
+        videoPlayer = YouTubePlayerView(frame: containerVideoPlayer.frame)
+        containerVideoPlayer.addSubview(videoPlayer)
+    }
     
     @objc internal func handlerCloseWindow() {
         self.dismiss(animated: true, completion: nil)
@@ -61,7 +71,7 @@ class YoutubeDetailsViewController: UIViewController {
         if let video = youtubeVideo {
             videoTitle.text = video.snippet.title
             if let videoId = video.id.videoId {
-                
+                videoPlayer.loadVideoID(videoId)
             }
             
         }

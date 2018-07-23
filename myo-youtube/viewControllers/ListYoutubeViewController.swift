@@ -46,6 +46,13 @@ extension ListYoutubeViewController: UITableViewDataSource, UITableViewDelegate 
         return videos.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc: UINavigationController = AppStoryboard.Main.instance.instantiateViewController(withIdentifier: "navigationController") as! UINavigationController
+        (vc.viewControllers.first as? YoutubeDetailsViewController)?.configure(videos[indexPath.row])
+        self.present(vc, animated: true, completion: nil)
+        
+    }
+    
 }
 
 // MARK: - UISearchBarDelegate
