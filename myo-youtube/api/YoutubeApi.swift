@@ -23,6 +23,16 @@ class YoutubeApi {
         }
         
     }
+    
+    
+    func getComments(_ videoId: String, callback: @escaping (_ response: YoutubeCommentList?) -> Void) {
+        
+        let commentsURL = YoutubeApi.comments + "?videoId=" + videoId + "&part=snippet&key=" + YoutubeApi.API_KEY
+        
+        Alamofire.request(commentsURL).responseJSONDecodable { (response: DataResponse<YoutubeCommentList>) in
+            callback(response.result.value)
+        }
 
+    }
 }
 
