@@ -22,5 +22,9 @@ class YoutubeVideoCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-   
+    func configure(_ video: YoutubeVideo) {
+        title.text = video.snippet.title
+        videoImageView.sd_setImage(with: video.snippet.thumbnails.defaultThumbnail.url, completed: nil)
+    }
+
 }

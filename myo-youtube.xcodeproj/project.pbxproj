@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		082B9F042106013B000BF11A /* YoutubeCommentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B9F032106013B000BF11A /* YoutubeCommentViewCell.swift */; };
 		08B2BDE52104C503008C6746 /* AppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B2BDE42104C503008C6746 /* AppStoryboard.swift */; };
+		08C374FB2105B986005E2371 /* YoutubeVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C374FA2105B986005E2371 /* YoutubeVideo.swift */; };
+		08C374FD2105C48E005E2371 /* YoutubeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C374FC2105C48E005E2371 /* YoutubeDetailsViewController.swift */; };
+		08C375022105E071005E2371 /* CommentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C375012105E071005E2371 /* CommentTableViewController.swift */; };
+		08C375042105FB48005E2371 /* YoutubeComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C375032105FB48005E2371 /* YoutubeComment.swift */; };
 		08C651402103263F00F11F75 /* YoutubeVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08C6513F2103263F00F11F75 /* YoutubeVideoCell.xib */; };
 		08C65143210326C800F11F75 /* YoutubeVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C65142210326C800F11F75 /* YoutubeVideoCell.swift */; };
 		08C6514521032AB400F11F75 /* ListYoutubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C6514421032AB400F11F75 /* ListYoutubeViewController.swift */; };
 		08EC5D7F21021D8F006C54FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC5D7E21021D8F006C54FE /* AppDelegate.swift */; };
-		08EC5D8121021D8F006C54FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC5D8021021D8F006C54FE /* ViewController.swift */; };
 		08EC5D8421021D8F006C54FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08EC5D8221021D8F006C54FE /* Main.storyboard */; };
 		08EC5D8721021D8F006C54FE /* myo_youtube.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 08EC5D8521021D8F006C54FE /* myo_youtube.xcdatamodeld */; };
 		08EC5D8921021D91006C54FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08EC5D8821021D91006C54FE /* Assets.xcassets */; };
@@ -22,13 +26,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		082B9F032106013B000BF11A /* YoutubeCommentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeCommentViewCell.swift; sourceTree = "<group>"; };
 		08B2BDE42104C503008C6746 /* AppStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoryboard.swift; sourceTree = "<group>"; };
+		08C374FA2105B986005E2371 /* YoutubeVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeVideo.swift; sourceTree = "<group>"; };
+		08C374FC2105C48E005E2371 /* YoutubeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeDetailsViewController.swift; sourceTree = "<group>"; };
+		08C375012105E071005E2371 /* CommentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewController.swift; sourceTree = "<group>"; };
+		08C375032105FB48005E2371 /* YoutubeComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeComment.swift; sourceTree = "<group>"; };
 		08C6513F2103263F00F11F75 /* YoutubeVideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YoutubeVideoCell.xib; sourceTree = "<group>"; };
 		08C65142210326C800F11F75 /* YoutubeVideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeVideoCell.swift; sourceTree = "<group>"; };
 		08C6514421032AB400F11F75 /* ListYoutubeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListYoutubeViewController.swift; sourceTree = "<group>"; };
 		08EC5D7B21021D8F006C54FE /* myo-youtube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "myo-youtube.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08EC5D7E21021D8F006C54FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		08EC5D8021021D8F006C54FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		08EC5D8321021D8F006C54FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		08EC5D8621021D8F006C54FE /* myo_youtube.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = myo_youtube.xcdatamodel; sourceTree = "<group>"; };
 		08EC5D8821021D91006C54FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,11 +68,20 @@
 			path = helpers;
 			sourceTree = "<group>";
 		};
+		08C374FE2105D087005E2371 /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				08C6514421032AB400F11F75 /* ListYoutubeViewController.swift */,
+				08C375012105E071005E2371 /* CommentTableViewController.swift */,
+			);
+			path = viewControllers;
+			sourceTree = "<group>";
+		};
 		08C6513C2103242B00F11F75 /* view */ = {
 			isa = PBXGroup;
 			children = (
 				08C651412103269C00F11F75 /* cellRender */,
-				08C6514421032AB400F11F75 /* ListYoutubeViewController.swift */,
+				08C374FC2105C48E005E2371 /* YoutubeDetailsViewController.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -74,6 +91,7 @@
 			children = (
 				08C6513F2103263F00F11F75 /* YoutubeVideoCell.xib */,
 				08C65142210326C800F11F75 /* YoutubeVideoCell.swift */,
+				082B9F032106013B000BF11A /* YoutubeCommentViewCell.swift */,
 			);
 			path = cellRender;
 			sourceTree = "<group>";
@@ -99,12 +117,12 @@
 		08EC5D7D21021D8F006C54FE /* myo-youtube */ = {
 			isa = PBXGroup;
 			children = (
+				08C374FE2105D087005E2371 /* viewControllers */,
 				08B2BDE32104C4ED008C6746 /* helpers */,
 				08C6513C2103242B00F11F75 /* view */,
 				08EC5D9621022650006C54FE /* model */,
 				08EC5D93210221FA006C54FE /* api */,
 				08EC5D7E21021D8F006C54FE /* AppDelegate.swift */,
-				08EC5D8021021D8F006C54FE /* ViewController.swift */,
 				08EC5D8221021D8F006C54FE /* Main.storyboard */,
 				08EC5D8821021D91006C54FE /* Assets.xcassets */,
 				08EC5D8A21021D91006C54FE /* LaunchScreen.storyboard */,
@@ -125,6 +143,8 @@
 		08EC5D9621022650006C54FE /* model */ = {
 			isa = PBXGroup;
 			children = (
+				08C374FA2105B986005E2371 /* YoutubeVideo.swift */,
+				08C375032105FB48005E2371 /* YoutubeComment.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -224,12 +244,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-myo-youtube/Pods-myo-youtube-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/YouTubePlayer/YouTubePlayer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YouTubePlayer.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -261,12 +285,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08C375042105FB48005E2371 /* YoutubeComment.swift in Sources */,
 				08B2BDE52104C503008C6746 /* AppStoryboard.swift in Sources */,
+				082B9F042106013B000BF11A /* YoutubeCommentViewCell.swift in Sources */,
+				08C374FB2105B986005E2371 /* YoutubeVideo.swift in Sources */,
 				08EC5D8721021D8F006C54FE /* myo_youtube.xcdatamodeld in Sources */,
-				08EC5D8121021D8F006C54FE /* ViewController.swift in Sources */,
+				08C374FD2105C48E005E2371 /* YoutubeDetailsViewController.swift in Sources */,
 				08C6514521032AB400F11F75 /* ListYoutubeViewController.swift in Sources */,
 				08EC5D95210225C7006C54FE /* YoutubeApi.swift in Sources */,
 				08EC5D7F21021D8F006C54FE /* AppDelegate.swift in Sources */,
+				08C375022105E071005E2371 /* CommentTableViewController.swift in Sources */,
 				08C65143210326C800F11F75 /* YoutubeVideoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,7 +441,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RUMEKEPPWV;
 				INFOPLIST_FILE = "myo-youtube/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -431,7 +461,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RUMEKEPPWV;
 				INFOPLIST_FILE = "myo-youtube/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
