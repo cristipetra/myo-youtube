@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol CommentCellProtocol {
+    func configure(_ item: CommentItem)
+}
+
 class YoutubeCommentViewCell: UITableViewCell {
 
     @IBOutlet weak var commentLbl: UILabel!
@@ -19,9 +23,10 @@ class YoutubeCommentViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    
+}
+
+extension YoutubeCommentViewCell: CommentCellProtocol {
     internal func configure(_ item: CommentItem) {
         commentLbl.text = item.snippet.topLevelComment.snippet.textDisplay
     }
-
 }

@@ -10,7 +10,7 @@ import Foundation
 
 struct YoutubeCommentList: Codable {
     var etag: String
-    var nextPageToken: String
+    var nextPageToken: String?
     
     var items: [CommentItem]
 }

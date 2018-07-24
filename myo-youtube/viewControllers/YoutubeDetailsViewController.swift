@@ -37,7 +37,6 @@ class YoutubeDetailsViewController: UIViewController {
             if let videoId = youtubeVideo.id.videoId {
                 commentsTableViewController.configure(videoId)
             }
-            
         }
     }
     
