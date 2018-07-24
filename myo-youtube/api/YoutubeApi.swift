@@ -20,12 +20,16 @@ class YoutubeApi {
             withAllowedCharacters: CharacterSet.urlQueryAllowed)!
     }
     
-    func getVideos(_ title: String, callback: @escaping (_ response: YoutubeSearch?) -> Void) {
+    func getVideos(_ title: String, callback: @escaping (_ response: YoutubeSearch?, _ error: ApiError?) -> Void) {
         
         let youtubeURL = escapedUrl( YoutubeApi.search + "?q=" + title + "&maxResults=25&part=snippet&type=video&key=" + YoutubeApi.API_KEY )
         
         Alamofire.request(youtubeURL).responseJSONDecodable { (response: DataResponse<YoutubeSearch>) in
-            callback(response.result.value)
+            if response.result.error == nil {
+                callback(response.result.value, nil)
+            } else {
+                callback(nil, ApiError())
+            }
         }
         
     }
@@ -41,3 +45,7 @@ class YoutubeApi {
     }
 }
 
+struct ApiError {
+    var message: String = "Please try again later"
+    var title: String = "Error"
+}

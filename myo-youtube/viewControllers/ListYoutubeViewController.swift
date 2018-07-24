@@ -8,6 +8,7 @@
 
 import UIKit
 import EZLoadingActivity
+import EZAlertController
 
 class ListYoutubeViewController: UIViewController {
 
@@ -62,8 +63,14 @@ extension ListYoutubeViewController: UITableViewDataSource, UITableViewDelegate 
 extension ListYoutubeViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         EZLoadingActivity.show("Loading...", disableUI: false)
-        YoutubeApi().getVideos(searchBar.text!) { (response) in
+        YoutubeApi().getVideos(searchBar.text!) { (response, error) in
             EZLoadingActivity.hide()
+            
+            if let error = error {
+                EZAlertController.alert(error.title, message: error.message)
+                return
+            }
+            
             if let items = response?.items {
                 self.videos = items
                 self.tableView.reloadData()

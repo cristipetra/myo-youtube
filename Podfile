@@ -11,5 +11,6 @@ target 'myo-youtube' do
   pod 'SDWebImage'
   pod 'YouTubePlayer', :git => 'https://github.com/cristipetra/Swift-YouTube-Player.git'
   pod 'EZLoadingActivity'
+  pod 'EZAlertController'
 
 end
